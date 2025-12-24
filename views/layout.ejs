@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Veronica Converter - Video to MP3' %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/audio-wave--v1.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-wave-square"></i>
+                <h1>Veronica Converter</h1>
+            </div>
+            <p class="tagline">Convert your videos to MP3 quickly and easily</p>
+        </header>
+
+        <main>
+            <!-- Flash messages -->
+            <% if (error) { %>
+                <div class="alert alert-error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <%= error %>
+                </div>
+            <% } %>
+            
+            <% if (success) { %>
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i>
+                    <%= success %>
+                </div>
+            <% } %>
+
+            <%- body %>
+        </main>
+
+        <footer>
+            <p>© 2023 Veronica Converter. All rights reserved.</p>
+            <p class="disclaimer">
+                <i class="fas fa-info-circle"></i>
+                This tool is for personal use only. Please respect copyright laws.
+            </p>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Terms</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<div class="content">
+    <div class="intro">
+        <h2><i class="fas fa-music"></i> Convert Video to MP3 in Seconds</h2>
+        <p>Upload your video file (max 10MB) and get high-quality MP3 audio instantly.</p>
+    </div>
+
+    <div class="upload-area" id="uploadArea">
+        <form action="/api/upload" method="POST" enctype="multipart/form-data" id="uploadForm">
+            <input type="file" id="videoFile" name="video" accept="video/*" required hidden>
+            
+            <div class="upload-box" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Drag & Drop your video here</h3>
+                <p>or click to browse files</p>
+                <p class="file-types">Supported: MP4, AVI, MOV, WMV, FLV</p>
+                <p class="file-size">Max size: 10MB</p>
+                <button type="button" class="btn-select" id="selectFileBtn">
+                    <i class="fas fa-folder-open"></i> Select Video
+                </button>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <div class="selected-file">
+                    <i class="fas fa-file-video"></i>
+                    <div>
+                        <p id="fileName">No file selected</p>
+                        <p id="fileSize">-</p>
+                    </div>
+                    <button type="button" class="btn-remove" id="removeFileBtn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="convert-options">
+                    <h4><i class="fas fa-sliders-h"></i> Conversion Options</h4>
+                    <div class="option-group">
+                        <label for="quality">
+                            <i class="fas fa-volume-up"></i> Audio Quality:
+                        </label>
+                        <select id="quality" name="quality">
+                            <option value="high">High (320 kbps)</option>
+                            <option value="medium" selected>Medium (192 kbps)</option>
+                            <option value="low">Low (128 kbps)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="upload-actions">
+                    <button type="submit" class="btn-convert" id="convertBtn">
+                        <i class="fas fa-bolt"></i> Convert to MP3
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-header">
+                <h4><i class="fas fa-sync-alt fa-spin"></i> Converting...</h4>
+                <p>Please wait while we convert your video</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText">0%</p>
+        </div>
+    </div>
+
+    <div class="features">
+        <h3><i class="fas fa-star"></i> Why Choose Veronica Converter?</h3>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Secure & Private</h4>
+                <p>Your files are deleted immediately after conversion. We never store your data.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h4>Fast Conversion</h4>
+                <p>Convert videos to MP3 in seconds with our optimized processing.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>No Installation</h4>
+                <p>Works directly in your browser. No software download required.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-infinity"></i>
+                <h4>Free Unlimited</h4>
+                <p>Convert as many files as you want, completely free of charge.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3><i class="fas fa-graduation-cap"></i> How to Convert</h3>
+        <ol>
+            <li>Click "Select Video" or drag & drop your video file</li>
+            <li>Choose audio quality settings (optional)</li>
+            <li>Click "Convert to MP3" to start conversion</li>
+            <li>Download your MP3 file when ready</li>
+        </ol>
+    </div>
+</div>
